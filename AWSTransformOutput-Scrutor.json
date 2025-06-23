@@ -1,0 +1,31 @@
+{
+    "version": "1.0",
+    "jobDetail": {
+        "targetBranch": "transform-d6a7e41f",
+        "targetVersion": ".NET 8.0"
+    },
+    "repositories": [
+        {
+            "name": "Scrutor",
+            "status": "SUCCESS",
+            "sourceBranch": "master",
+            "transformedProjects": 1,
+            "totalProjects": 1,
+            "transformedLinesOfCode": 109,
+            "totalLinesOfCode": 124,
+            "repositoryLocation": {
+                "id": "QtNetModernization1/Scrutor",
+                "type": "GitHub",
+                "url":"https://github.com/QtNetModernization1/Scrutor"
+        },
+            "projects": [{
+                "name": "Scrutor",
+                "status": "SUCCEEDED",
+                "projectTypes": ["WepApp"],
+                "version": [],
+                "totalLinesOfCode": 109,
+                "transformedLinesOfCode": 109,
+                "filesChange": 1
+            }]
+        }]
+}

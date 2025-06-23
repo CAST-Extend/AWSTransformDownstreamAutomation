@@ -1,0 +1,247 @@
+{
+  "version": "1.0",
+  "jobDetail": {
+    "targetBranch": "transform-45913916",
+    "targetVersion": ".NET 8.0"
+  },
+  "repositories": [
+    {
+      "name": "BobBookStore",
+      "status": "SUCCESS",
+      "sourceBranch": "main",
+      "transformedProjects": 5,
+      "totalProjects": 5,
+      "transformedLinesOfCode": 4052,
+      "totalLinesOfCode": 4148,
+      "repositoryLocation": {
+        "id": "QtNetModernization1/BobBookStore",
+        "type": "GitHub",
+        "url": "https://github.com/QtNetModernization1/BobBookStore"
+      },
+      "projects": [
+        {
+          "name": "Bookstore.Common",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netstandard2.0"
+          ],
+          "totalLinesOfCode": 7,
+          "transformedLinesOfCode": 7,
+          "filesChange": 1,
+          "transformationSummary": "# Bookstore.Common.csproj Update Summary\n\nThis diff shows a migration from .NET Standard 2.0 to .NET 8.0 for the Bookstore.Common project. The csproj file has been updated to target the newer framework while maintaining the Microsoft.NET.Sdk project type.\n\n## Key Changes:\n\n* **Framework Upgrade**: Changed target framework from `netstandard2.0` to `net8.0`\n* **XML Declaration**: Added XML version and encoding declaration\n* **File Format**: Removed blank lines, making the file more compact\n\nThis update enables the project to leverage .NET 8.0 features instead of the more limited .NET Standard 2.0 compatibility surface. The change may affect library compatibility with older framework versions as the project is no longer targeting the cross-platform compatibility layer.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Cdk",
+          "status": "SUCCEEDED",
+          "types": [
+            "ConsoleApp"
+          ],
+          "versions": [
+            "net8.0"
+          ],
+          "totalLinesOfCode": 505,
+          "transformedLinesOfCode": 505,
+          "filesChange": 6,
+          "transformationSummary": "# Code Diff Summary: Bookstore.Cdk.csproj\n\nThe diff shows an update to the Bookstore.Cdk.csproj file, which contains package reference updates and structural changes to the project file format.\n\n## Key Technical Changes:\n\n* **Package Updates:**\n  * Amazon.CDK.Lib updated from 2.102.0 to 2.181.1\n  * Constructs updated from 10.3.0 to 10.4.2\n  * Cdklabs.CdkNag updated from 2.27.158 to 2.35.36\n  * Amazon.Jsii.Analyzers no longer has the PrivateAssets=\"all\" attribute\n\n* **Project File Structure:**\n  * Added XML declaration at the top (`<?xml version=\"1.0\" encoding=\"utf-8\"?>`)\n  * Reorganized ItemGroup elements, placing ProjectReference before PackageReference\n  * Alphabetically sorted the PropertyGroup elements\n  * Removed nesting whitespace for cleaner XML structure\n\nThe updated dependencies indicate a modernization effort to leverage the latest AWS CDK libraries, potentially bringing new features and security improvements from the CDK ecosystem.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Domain",
+          "status": "SUCCEEDED",
+          "types": [
+            "ClassLibrary"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 979,
+          "transformedLinesOfCode": 964,
+          "filesChange": 42,
+          "transformationSummary": "# Bookstore.Domain Project Migration to .NET Core\n\nThis diff shows the modernization of a .NET Framework 4.8 project to .NET 8.0. The changes convert the traditional MSBuild format to the new SDK-style project structure, which is more compact and has built-in dependency management through NuGet.\n\n## Key Technical Changes\n\n* **Framework Upgrade**: Migrated from .NET Framework 4.8 to .NET 8.0\n* **Project Structure**: \n  * Converted from legacy XML project format to modern SDK-style format\n  * Removed manual assembly references in favor of implicit framework references\n  * Removed `packages.config` in favor of direct PackageReference elements\n* **Assembly Metadata**: \n  * Removed `AssemblyInfo.cs` file as metadata can be defined in the project file\n  * Assembly version information now managed through the project file\n* **Repository Pattern Implementation**: \n  * Removed concrete repository implementations while keeping interfaces\n  * Files removed include all repository implementations under the Repositories folder\n* **Configuration Management**:\n  * Removed `BookstoreConfiguration.cs`, `ApplicationDbContext.cs`, and `ServiceProvider.cs`\n  * This suggests a shift toward dependency injection provided by ASP.NET Core\n\nThe EntityFramework package reference was maintained at version 6.5.1, which indicates the application is using EF6 even in the .NET Core environment.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Data",
+          "status": "SUCCEEDED",
+          "types": [
+            "ClassLibrary"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 1361,
+          "transformedLinesOfCode": 1346,
+          "filesChange": 24,
+          "transformationSummary": "# Migration from .NET Framework to .NET 8 in Bookstore.Data Project\n\nThis diff shows a migration of the Bookstore.Data project from .NET Framework 4.8 to .NET 8.0. The project structure has been modernized to use the new SDK-style project format, eliminating the older MSBuild format and reducing the overall file footprint.\n\n## Key Technical Changes:\n\n* **Project Format Migration:**\n  * Converted from classic .csproj format to the SDK-style project format\n  * Removed the need for packages.config in favor of PackageReference format\n  * Eliminated AssemblyInfo.cs as properties are now defined in the project file\n\n* **Framework Update:**\n  * Upgraded from .NET Framework 4.8 to .NET 8.0\n  * Updated NuGet package references to versions compatible with .NET 8.0\n\n* **Dependency Management:**\n  * Added System.Configuration.ConfigurationManager package to replace framework functionality\n  * Updated AWS SDK packages to newer versions\n  * Updated ImageMagick libraries (Magick.NET-Core from 13.9.1 to 14.5.0)\n  * Updated EntityFramework from 6.4.4 to 6.5.1\n\n* **Project Structure:**\n  * Simplified build configuration by removing manual build settings\n  * Removed explicit GUID reference required by older project systems\n  * Project references now use simplified syntax",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Web",
+          "status": "SUCCEEDED",
+          "types": [
+            "ClassLibrary",
+            "AspNetMvc"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 1296,
+          "transformedLinesOfCode": 1230,
+          "filesChange": 32,
+          "transformationSummary": "# Technical Summary: Bookstore.Web Migration to ASP.NET Core\n\nThis migration transitions the Bookstore.Web application from ASP.NET MVC on .NET Framework 4.8 to ASP.NET Core MVC on .NET 8.0, bringing cross-platform capabilities while preserving core functionality.\n\n## Key Technical Changes\n\n### Project Structure Modernization\n- Removed legacy ASP.NET files (`Global.asax`, `AssemblyInfo.cs`, App_Start folder)\n- Added `Program.cs` to replace `Global.asax.cs` bootstrapping logic\n- Converted from XML-based to SDK-style project format\n- Relocated static content from `/Content` and `/Scripts` to `/wwwroot` following ASP.NET Core conventions\n\n### Framework and Library Updates\n- Replaced `System.Web.Mvc` with `Microsoft.AspNetCore.Mvc`\n- Updated HTTP context handling with modern `HttpContext`\n- Switched from `BundleConfig` to WebOptimizer for asset management\n- Updated controller base classes to ASP.NET Core equivalents\n\n### Authentication and Authorization\n- Implemented ASP.NET Core Identity middleware\n- Updated cookie authentication to use modern `Response.Cookies` methods\n- Replaced classic `[Authorize]` attributes with ASP.NET Core's authorization framework\n- Added AWS Cognito integration points for authentication\n\n### Configuration Management\n- Replaced `web.config` with `appsettings.json` for application settings\n- Implemented structured configuration with sections for database, services, and authentication\n- Added environment-specific configuration support\n- Integrated with AWS services including S3 for file storage and Systems Manager\n\n### Logging and Dependency Injection\n- Replaced NLog setup with ASP.NET Core's built-in logging infrastructure\n- Configured service dependencies with toggles for local vs AWS implementations\n\nThe migration maintains the application's functionality while adopting modern ASP.NET Core architectural patterns and conventions.",
+          "errorSummary": ""
+        }
+      ]
+    },
+    {
+      "name": "Bruteflow",
+      "status": "SUCCESS",
+      "sourceBranch": "main",
+      "transformedProjects": 10,
+      "totalProjects": 10,
+      "transformedLinesOfCode": 3752,
+      "totalLinesOfCode": 3740,
+      "repositoryLocation": {
+        "id": "QtNetModernization1/Bruteflow",
+        "type": "GitHub",
+        "url": "https://github.com/QtNetModernization1/Bruteflow"
+      },
+      "projects": [
+        {
+          "name": "Bruteflow",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 456,
+          "transformedLinesOfCode": 456,
+          "filesChange": 16,
+          "transformationSummary": "# Bruteflow.csproj Update Summary\n\nThis update migrates the Bruteflow project from .NET Core 3.1 to .NET 8.0, including dependency updates and project file restructuring. The changes maintain the same package version while modernizing the framework target.\n\n## Key Technical Changes:\n\n* **Framework Upgrade**: \n  * Changed from `netcoreapp3.1` to `net8.0`, representing a multi-version upgrade\n  * Removed `LangVersion` property as it's no longer needed with .NET 8\n\n* **Dependencies Update**:\n  * Updated Microsoft.Extensions.DependencyInjection from version 3.1.10 to 9.0.2\n\n* **Project File Structure**:\n  * Added XML declaration (`<?xml version=\"1.0\" encoding=\"utf-8\"?>`)\n  * Reorganized PropertyGroup elements in alphabetical order\n  * Maintained package metadata (authors, version, repository information)\n\n* **Compatibility Impact**:\n  * This change implies breaking runtime compatibility with applications targeting .NET Core 3.1\n  * Consumer applications will need to target .NET 8.0 or implement appropriate compatibility strategies",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Tests",
+          "status": "SUCCEEDED",
+          "types": [
+            "XUnit"
+          ],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 279,
+          "transformedLinesOfCode": 282,
+          "filesChange": 4,
+          "transformationSummary": "# Bruteflow.Tests.csproj Migration Summary\n\nThis diff shows an update of the Bruteflow.Tests project from .NET Core 3.1 to .NET 8.0, with corresponding package version updates to maintain compatibility with the newer framework.\n\n## Key Technical Changes:\n\n* **Framework Upgrade**: \n  * Changed target framework from `netcoreapp3.1` to `net8.0`\n\n* **Package Version Updates**:\n  * `System.Threading.Tasks.Dataflow` updated from 4.11.1 to 8.0.1\n  * `FluentAssertions` updated from 5.10.3 to 8.0.0\n  * `xunit` updated from 2.4.1 to 2.4.2\n  * Several package references now use wildcard version (`*`) for automatic resolution:\n    * `xunit.runner.visualstudio`\n    * `xunit.runner.console` (newly added)\n    * `Microsoft.NET.Test.Sdk`\n\n* **File Format Changes**:\n  * Added XML declaration `<?xml version=\"1.0\" encoding=\"utf-8\"?>` at the top of the file\n  * Project file restructured with simplified property and item groups",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Kafka",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 775,
+          "transformedLinesOfCode": 775,
+          "filesChange": 28,
+          "transformationSummary": "# Bruteflow.Kafka Project Migration to .NET 8.0\n\nThis diff shows a migration of the Bruteflow.Kafka project from .NET Core 3.1 to .NET 8.0, along with updates to several package references to their newer versions compatible with .NET 8.0.\n\n## Key Technical Changes:\n\n* **Framework Migration**: \n  * Upgraded from `netcoreapp3.1` to `net8.0`\n\n* **Package Updates**:\n  * `Confluent.Kafka`: 1.5.2 → 2.3.0\n  * `MessagePack`: 2.2.60 → 3.1.3\n  * `Newtonsoft.Json`: 12.0.3 → 13.0.3\n  * `Microsoft.Extensions.Logging`: 3.1.10 → 8.0.0\n  * `Microsoft.Extensions.Configuration`: 3.1.10 → 9.0.2\n\n* **Project File Updates**:\n  * Added XML declaration at the top (`<?xml version=\"1.0\" encoding=\"utf-8\"?>`)\n  * Property ordering reorganized\n  * Language version specification (`LangVersion`) removed, as .NET 8 defaults to latest C# version\n\nThis migration ensures compatibility with modern .NET while maintaining the same package structure and functionality.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Kafka.Stats",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 100,
+          "transformedLinesOfCode": 100,
+          "filesChange": 3,
+          "transformationSummary": "# Bruteflow.Kafka.Stats Project Upgrade\n\nThis diff shows a migration of the Bruteflow.Kafka.Stats project from .NET Core 3.1 to .NET 8.0. The project has been updated with modern dependency versions while maintaining the same package versioning and metadata.\n\n## Key Technical Changes\n\n* **Framework Upgrade**: \n  * Changed target framework from `netcoreapp3.1` to `net8.0`\n\n* **Dependencies Updated**:\n  * Microsoft.Extensions.Logging: 3.1.10 → 8.0.0\n  * JustEat.StatsD: 4.2.0 → 5.1.0\n  * Bruteflow.Kafka dependency version remains at 2.3.0\n\n* **Project Structure**:\n  * Added XML declaration at the top of the csproj file\n  * Reordered project properties alphabetically\n  * Removed explicit LangVersion declaration (no longer needed as .NET 8 defaults to the latest C# version)\n\n* **Retained Configuration**:\n  * Package metadata (author, copyright, repository info)\n  * Package versioning (2.3.0)\n  * Package generation settings",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Kafka.Tests",
+          "status": "SUCCEEDED",
+          "types": [
+            "XUnit"
+          ],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 260,
+          "transformedLinesOfCode": 263,
+          "filesChange": 14,
+          "transformationSummary": "# Technical Changes to Bruteflow.Kafka.Tests.csproj\n\nThe project file has been modernized from targeting .NET Core 3.1 to .NET 8.0, with updates to package references and their versions. The csproj structure has been simplified by removing explicit version declarations for some packages through wildcard versioning.\n\n## Key Technical Changes:\n\n* **Framework Upgrade**: \n  * Changed target framework from `netcoreapp3.1` to `net8.0`\n  * Represents a major runtime update (5+ versions) with performance improvements and new language features\n\n* **Package Version Updates**:\n  * Microsoft.Extensions.Logging: 3.1.10 → 8.0.0\n  * FluentAssertions: 5.10.3 → 8.0.0\n  * Moq: 4.15.1 → 4.20.72\n  * coverlet.collector: 1.3.0 → 6.0.2\n\n* **Package Management**:\n  * Added wildcard versioning (`Version=\"*\"`) for test runner dependencies\n  * Added xunit.runner.console package for improved test execution support\n  * Reordered package references for better readability\n\n* **XML Structure**:\n  * Added XML declaration at the top of the file\n  * More compact PropertyGroup and ItemGroup layouts",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 456,
+          "transformedLinesOfCode": 456,
+          "filesChange": 16,
+          "transformationSummary": "# Technical Summary: Bruteflow.csproj Changes\n\nThis diff shows a migration of the Bruteflow project from .NET Core 3.1 to .NET 8.0. The project structure has been updated while maintaining the same package version number, but with modernized dependencies.\n\n## Key Technical Changes:\n\n* **Framework Upgrade**: \n  - Migrated from `netcoreapp3.1` to `net8.0`\n  - Represents a major runtime version change spanning multiple .NET releases\n\n* **Dependency Updates**:\n  - Updated Microsoft.Extensions.DependencyInjection from version 3.1.10 to 9.0.2\n  - Ensures compatibility with the newer .NET runtime\n\n* **Project File Format**:\n  - Added XML declaration (`<?xml version=\"1.0\" encoding=\"utf-8\"?>`)\n  - Reorganized property elements in alphabetical order\n  - Removed explicit LangVersion setting (8) as it's no longer needed in .NET 8\n\n* **File Structure**:\n  - Maintained the same package metadata\n  - Preserved the exclusion of README.md from the build\n\nThe migration maintains backward compatibility in terms of package versioning (still at 2.3.0) while enabling the library to leverage the latest .NET runtime features and performance improvements.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Kafka",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 775,
+          "transformedLinesOfCode": 775,
+          "filesChange": 28,
+          "transformationSummary": "# Technical Summary: Bruteflow.Kafka Project Modernization\n\nThis diff represents a migration of the Bruteflow.Kafka project from .NET Core 3.1 to .NET 8.0. The changes focus on updating the target framework and package dependencies to ensure compatibility with newer .NET versions.\n\n## Key Technical Changes:\n\n* **Framework Update**:\n  * Changed target framework from `netcoreapp3.1` to `net8.0`\n\n* **Package Upgrades**:\n  * Confluent.Kafka: 1.5.2 → 2.3.0\n  * Newtonsoft.Json: 12.0.3 → 13.0.3\n  * MessagePack: 2.2.60 → 3.1.3\n  * Microsoft.Extensions.Logging: 3.1.10 → 8.0.0\n  * Microsoft.Extensions.Configuration: 3.1.10 → 9.0.2\n\n* **XML Changes**:\n  * Added XML declaration `<?xml version=\"1.0\" encoding=\"utf-8\"?>` at the beginning of the file\n  * Reorganized property order in the PropertyGroup section\n\n* **Removed Properties**:\n  * Removed explicit LangVersion specification (now inherits from the target framework)",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Kafka.Stats",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 100,
+          "transformedLinesOfCode": 100,
+          "filesChange": 3,
+          "transformationSummary": "# Bruteflow.Kafka.Stats Project Update\n\nThe project file `Bruteflow.Kafka.Stats.csproj` has been migrated from .NET Core 3.1 to .NET 8.0. The update includes dependency upgrades and configuration structure modernization.\n\n## Key Changes:\n\n* **Framework Migration**:\n  * Upgraded from `netcoreapp3.1` to `net8.0`\n  * Removed `LangVersion` property as it's now implicit\n\n* **Dependency Updates**:\n  * Microsoft.Extensions.Logging: 3.1.10 → 8.0.0\n  * JustEat.StatsD: 4.2.0 → 5.1.0\n  * Bruteflow.Kafka maintained at version 2.3.0\n\n* **Project Structure**:\n  * Added XML declaration at the top of the file\n  * Reorganized property ordering to be alphabetical\n  * Removed empty lines between property groups and item groups\n\nThese changes align the project with modern .NET development standards while maintaining compatibility with the Bruteflow.Kafka base package.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Kafka.Tests",
+          "status": "SUCCEEDED",
+          "types": [
+            "XUnit"
+          ],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 260,
+          "transformedLinesOfCode": 263,
+          "filesChange": 14,
+          "transformationSummary": "# Technical Summary: Bruteflow.Kafka.Tests.csproj Modernization\n\nThe diff shows an upgrade of the Bruteflow.Kafka.Tests project from .NET Core 3.1 to .NET 8.0, along with package version updates. The project structure remains intact while modernizing the runtime target and dependencies.\n\n## Key Technical Changes\n\n- **Framework Upgrade**: \n  - Migrated from `netcoreapp3.1` to `net8.0`, advancing the runtime by multiple major versions\n\n- **Package Updates**:\n  - Microsoft.Extensions.Logging: `3.1.10` → `8.0.0` (aligned with framework version)\n  - FluentAssertions: `5.10.3` → `8.0.0` (major version upgrade)\n  - Moq: `4.15.1` → `4.20.72` (version bump)\n  - coverlet.collector: `1.3.0` → `6.0.2` (major version upgrade)\n  - xunit: `2.4.0` → `2.4.2` (minor version update)\n\n- **Package Reference Changes**:\n  - Added `xunit.runner.console` package\n  - Changed several package references to use wildcard versioning (`*`) for automatic updates\n  - Removed explicit IncludeAssets/PrivateAssets specifications\n\n- **File Format**:\n  - Added XML declaration to the csproj file\n  - Simplified project structure with more concise formatting",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bruteflow.Tests",
+          "status": "SUCCEEDED",
+          "types": [
+            "XUnit"
+          ],
+          "versions": [
+            "netcoreapp3.1"
+          ],
+          "totalLinesOfCode": 279,
+          "transformedLinesOfCode": 282,
+          "filesChange": 4,
+          "transformationSummary": "# Bruteflow.Tests.csproj Update Summary\n\nThe csproj file has been updated to target .NET 8.0 from .NET Core 3.1, modernizing the test project to the latest .NET version. Package references have been updated to align with .NET 8 compatibility, and the file structure has been reorganized for better readability.\n\n## Key Technical Changes\n\n* **Framework Upgrade**: Target framework migrated from `netcoreapp3.1` to `net8.0`\n* **Package Updates**:\n  * System.Threading.Tasks.Dataflow updated to 8.0.1\n  * FluentAssertions updated to 8.0.0\n  * Other packages now use wildcard versioning (`*`)\n* **XML Declaration**: Added standard XML declaration at the top of the file\n* **Package References**: Removed explicit IncludeAssets/PrivateAssets configuration for xunit.runner.visualstudio\n* **New Dependencies**: Added xunit.runner.console package\n* **File Structure**: Simplified project file structure with more consistent formatting",
+          "errorSummary": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+
+#################################################################
+############# Highlight Automation Command Configuration ########
+#################################################################
+
+######################## IMPORTANT NOTE ##########################
+# Any special characters (:,=,\,@) are escape in key and values #
+# path=c:\path                                                  #
+# name=firstname\:john,lastname\=andrew                        #
+# support.email=support\@domain.com                             #
+# hr\:email=hr\@domain.com                                     #
+##################################################################
+
+### MANDATORY PARAMETERS ###
+workingDir=./working/cli_out
+sourceDir=./working/src
+gitUrl=
+gitBranch=
+gitToken=
+
+
+### PERL ###
+perlInstallDir=./CAST Highlight Code Reader/strawberry/perl
+###  ANALYZER (DEFAULT INSTALL PATH  ###
+analyzerDir=./CAST Highlight Code Reader/Highlight-Automation-Command/perl
+
+#################################################################
+##################### Docker Image Analyse ######################
+# Note : Provided docker Image must be accessible locally       #
+#        the value should have the following format name_tag	#
+#        EG: Debian:0.7 | Debian#latest                         #
+#################################################################
+#dockerImageNameTag=Debian#latest
+
+
+#################################################################  
+####################### IGNORE OPTION  ##########################
+# Note : Ignore directories must be separated with coma ","   #  
+#        Ignore Files must be separated with coma ","		    #	
+#        Ignore Path must be separated with "|"				#	
+#        For Ignore Path, the "^" specified a subdirectory	#
+#        EG: ^test = ignore all subdirectory test   			#	
+#################################################################
+ignoreDirectories=Scripts,lib,bin,obj,Debug,Release
+
+
+### SCAN OPTION  ###
+#help=false
+#printTechnos=false
+#appendResult=false
+#skipSubmit=false
+dbgMatchPatternDetail=true
+allowGeneratedCode=false
+includeAllDependencies=false
+analyzeBigFiles=false
+
+zipResult=./HL.results.zip
+keywordScan=./CAST Highlight Code Reader/cast.keyword.dotnet.xml
+
+#includeArchiveContent=0
+
+#################################################################  
+####################### UPLOAD OPTION  ##########################
+# Note : You must set the skipUpload setting to false if you    #  
+#        want to use the upload options 						#	
+#        You can find some examples bellow						#	
+#################################################################
+
+skipUpload=false
+
+#login=john.doe/@acme.com
+#password=*******
+#basicAuth=bXlsb2dpbjpteXBhc3N3b3Jk
+tokenAuth=
+companyId=
+applicationId=
+serverUrl=
+snapshotLabel=
+snapshotDatetime=
+#uploadZipFile

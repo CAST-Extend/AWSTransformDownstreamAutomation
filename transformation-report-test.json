@@ -1,0 +1,199 @@
+{
+  "version": "1.0",
+  "jobDetail": {
+    "targetBranch": "transform-d6a7e41f",
+    "targetVersion": ".NET 8.0"
+  },
+  "repositories": [
+    {
+      "name": "bobs-used-bookstore-classic",
+      "status": "SUCCESS",
+      "sourceBranch": "main",
+      "transformedProjects": 5,
+      "totalProjects": 5,
+      "transformedLinesOfCode": 4052,
+      "totalLinesOfCode": 4148,
+      "repositoryLocation": {
+        "id": "ReposForDemos/bobs-used-bookstore-classic",
+        "type": "GitHub",
+        "url": "https://github.com/ReposForDemos/bobs-used-bookstore-classic"
+      },
+      "projects": [
+        {
+          "name": "Bookstore.Common",
+          "status": "SUCCEEDED",
+          "types": [],
+          "versions": [
+            "netstandard2.0"
+          ],
+          "totalLinesOfCode": 7,
+          "transformedLinesOfCode": 7,
+          "filesChange": 1,
+          "transformationSummary": "# Bookstore.Common.csproj Update Summary\n\nThis diff shows a migration from .NET Standard 2.0 to .NET 8.0 for the Bookstore.Common project. The csproj file has been updated to target the newer framework while maintaining the Microsoft.NET.Sdk project type.\n\n## Key Changes:\n\n* **Framework Upgrade**: Changed target framework from `netstandard2.0` to `net8.0`\n* **XML Declaration**: Added XML version and encoding declaration\n* **File Format**: Removed blank lines, making the file more compact\n\nThis update enables the project to leverage .NET 8.0 features instead of the more limited .NET Standard 2.0 compatibility surface. The change may affect library compatibility with older framework versions as the project is no longer targeting the cross-platform compatibility layer.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Cdk",
+          "status": "SUCCEEDED",
+          "types": [
+            "ConsoleApp"
+          ],
+          "versions": [
+            "net8.0"
+          ],
+          "totalLinesOfCode": 505,
+          "transformedLinesOfCode": 505,
+          "filesChange": 6,
+          "transformationSummary": "# Code Diff Summary: Bookstore.Cdk.csproj\n\nThe diff shows an update to the Bookstore.Cdk.csproj file, which contains package reference updates and structural changes to the project file format.\n\n## Key Technical Changes:\n\n* **Package Updates:**\n  * Amazon.CDK.Lib updated from 2.102.0 to 2.181.1\n  * Constructs updated from 10.3.0 to 10.4.2\n  * Cdklabs.CdkNag updated from 2.27.158 to 2.35.36\n  * Amazon.Jsii.Analyzers no longer has the PrivateAssets=\"all\" attribute\n\n* **Project File Structure:**\n  * Added XML declaration at the top (`<?xml version=\"1.0\" encoding=\"utf-8\"?>`)\n  * Reorganized ItemGroup elements, placing ProjectReference before PackageReference\n  * Alphabetically sorted the PropertyGroup elements\n  * Removed nesting whitespace for cleaner XML structure\n\nThe updated dependencies indicate a modernization effort to leverage the latest AWS CDK libraries, potentially bringing new features and security improvements from the CDK ecosystem.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Domain",
+          "status": "SUCCEEDED",
+          "types": [
+            "ClassLibrary"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 979,
+          "transformedLinesOfCode": 964,
+          "filesChange": 42,
+          "transformationSummary": "# Bookstore.Domain Project Migration to .NET Core\n\nThis diff shows the modernization of a .NET Framework 4.8 project to .NET 8.0. The changes convert the traditional MSBuild format to the new SDK-style project structure, which is more compact and has built-in dependency management through NuGet.\n\n## Key Technical Changes\n\n* **Framework Upgrade**: Migrated from .NET Framework 4.8 to .NET 8.0\n* **Project Structure**: \n  * Converted from legacy XML project format to modern SDK-style format\n  * Removed manual assembly references in favor of implicit framework references\n  * Removed `packages.config` in favor of direct PackageReference elements\n* **Assembly Metadata**: \n  * Removed `AssemblyInfo.cs` file as metadata can be defined in the project file\n  * Assembly version information now managed through the project file\n* **Repository Pattern Implementation**: \n  * Removed concrete repository implementations while keeping interfaces\n  * Files removed include all repository implementations under the Repositories folder\n* **Configuration Management**:\n  * Removed `BookstoreConfiguration.cs`, `ApplicationDbContext.cs`, and `ServiceProvider.cs`\n  * This suggests a shift toward dependency injection provided by ASP.NET Core\n\nThe EntityFramework package reference was maintained at version 6.5.1, which indicates the application is using EF6 even in the .NET Core environment.",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Data",
+          "status": "SUCCEEDED",
+          "types": [
+            "ClassLibrary"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 1361,
+          "transformedLinesOfCode": 1346,
+          "filesChange": 24,
+          "transformationSummary": "# Migration from .NET Framework to .NET 8 in Bookstore.Data Project\n\nThis diff shows a migration of the Bookstore.Data project from .NET Framework 4.8 to .NET 8.0. The project structure has been modernized to use the new SDK-style project format, eliminating the older MSBuild format and reducing the overall file footprint.\n\n## Key Technical Changes:\n\n* **Project Format Migration:**\n  * Converted from classic .csproj format to the SDK-style project format\n  * Removed the need for packages.config in favor of PackageReference format\n  * Eliminated AssemblyInfo.cs as properties are now defined in the project file\n\n* **Framework Update:**\n  * Upgraded from .NET Framework 4.8 to .NET 8.0\n  * Updated NuGet package references to versions compatible with .NET 8.0\n\n* **Dependency Management:**\n  * Added System.Configuration.ConfigurationManager package to replace framework functionality\n  * Updated AWS SDK packages to newer versions\n  * Updated ImageMagick libraries (Magick.NET-Core from 13.9.1 to 14.5.0)\n  * Updated EntityFramework from 6.4.4 to 6.5.1\n\n* **Project Structure:**\n  * Simplified build configuration by removing manual build settings\n  * Removed explicit GUID reference required by older project systems\n  * Project references now use simplified syntax",
+          "errorSummary": ""
+        },
+        {
+          "name": "Bookstore.Web",
+          "status": "SUCCEEDED",
+          "types": [
+            "ClassLibrary",
+            "AspNetMvc"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 1296,
+          "transformedLinesOfCode": 1230,
+          "filesChange": 32,
+          "transformationSummary": "# Technical Summary: Bookstore.Web Migration to ASP.NET Core\n\nThis migration transitions the Bookstore.Web application from ASP.NET MVC on .NET Framework 4.8 to ASP.NET Core MVC on .NET 8.0, bringing cross-platform capabilities while preserving core functionality.\n\n## Key Technical Changes\n\n### Project Structure Modernization\n- Removed legacy ASP.NET files (`Global.asax`, `AssemblyInfo.cs`, App_Start folder)\n- Added `Program.cs` to replace `Global.asax.cs` bootstrapping logic\n- Converted from XML-based to SDK-style project format\n- Relocated static content from `/Content` and `/Scripts` to `/wwwroot` following ASP.NET Core conventions\n\n### Framework and Library Updates\n- Replaced `System.Web.Mvc` with `Microsoft.AspNetCore.Mvc`\n- Updated HTTP context handling with modern `HttpContext`\n- Switched from `BundleConfig` to WebOptimizer for asset management\n- Updated controller base classes to ASP.NET Core equivalents\n\n### Authentication and Authorization\n- Implemented ASP.NET Core Identity middleware\n- Updated cookie authentication to use modern `Response.Cookies` methods\n- Replaced classic `[Authorize]` attributes with ASP.NET Core's authorization framework\n- Added AWS Cognito integration points for authentication\n\n### Configuration Management\n- Replaced `web.config` with `appsettings.json` for application settings\n- Implemented structured configuration with sections for database, services, and authentication\n- Added environment-specific configuration support\n- Integrated with AWS services including S3 for file storage and Systems Manager\n\n### Logging and Dependency Injection\n- Replaced NLog setup with ASP.NET Core's built-in logging infrastructure\n- Configured service dependencies with toggles for local vs AWS implementations\n\nThe migration maintains the application's functionality while adopting modern ASP.NET Core architectural patterns and conventions.",
+          "errorSummary": ""
+        }
+      ]
+    },
+    {
+      "name":"BSTTiming",
+      "status":"SUCCESS",
+      "sourceBranch":"main",
+      "transformedProjects":1,
+      "totalProjects":1,
+      "transformedLinesOfCode":109,
+      "totalLinesOfCode":124,
+      "repositoryLocation":{
+        "id":"ReposForDemos/BSTTiming",
+        "type":"GitHub",
+        "url":"https://github.com/ReposForDemos/BSTTiming"
+      },
+      "projects":[
+        {
+          "name":"BSTTiming",
+          "status":"SUCCEEDED",
+          "types":["ConsoleApp"],
+          "versions":[],
+          "totalLinesOfCode":109,
+          "transformedLinesOfCode":109,
+          "filesChange":1
+        }
+      ]
+    },
+    {
+      "name": "Scrutor",
+      "status": "SUCCESS",
+      "sourceBranch": "master",
+      "transformedProjects": 1,
+      "totalProjects": 1,
+      "transformedLinesOfCode": 109,
+      "totalLinesOfCode": 124,
+      "repositoryLocation": {
+        "id": "ReposForDemos/Scrutor",
+        "type": "GitHub",
+        "url": "https://github.com/ReposForDemos/Scrutor"
+      },
+      "projects": [
+        {
+          "name": "Scrutor",
+          "status": "SUCCEEDED",
+          "types": [
+            "ConsoleApp"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 109,
+          "transformedLinesOfCode": 109,
+          "filesChange": 1
+        }
+      ]
+    },
+    {
+      "name": "JabbR",
+      "status": "SUCCESS",
+      "sourceBranch": "master",
+      "transformedProjects": 1,
+      "totalProjects": 1,
+      "transformedLinesOfCode": 109,
+      "totalLinesOfCode": 124,
+      "repositoryLocation": {
+        "id": "ReposForDemos/JabbR",
+        "type": "GitHub",
+        "url": "https://github.com/ReposForDemos/JabbR"
+      },
+      "projects": [
+        {
+          "name": "JabbR",
+          "status": "SUCCEEDED",
+          "types": [
+            "ConsoleApp"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 109,
+          "transformedLinesOfCode": 109,
+          "filesChange": 1
+        }
+      ]
+    },
+    {
+      "name": "Umbraco-CMS",
+      "status": "SUCCESS",
+      "sourceBranch": "contrib",
+      "transformedProjects": 1,
+      "totalProjects": 1,
+      "transformedLinesOfCode": 109,
+      "totalLinesOfCode": 124,
+      "repositoryLocation": {
+        "id": "ReposForDemos/Umbraco-CMS",
+        "type": "GitHub",
+        "url": "https://github.com/ReposForDemos/Umbraco-CMS"
+      },
+      "projects": [
+        {
+          "name": "Umbraco-CMS",
+          "status": "SUCCEEDED",
+          "types": [
+            "ConsoleApp"
+          ],
+          "versions": [],
+          "totalLinesOfCode": 109,
+          "transformedLinesOfCode": 109,
+          "filesChange": 1
+        }
+      ]
+    }
+  ]
+}

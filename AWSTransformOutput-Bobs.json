@@ -1,0 +1,32 @@
+
+{
+    "version": "1.0",
+    "jobDetail": {
+        "targetBranch": "qct-workshop",
+        "targetVersion": ".NET 8.0"
+    },
+    "repositories": [
+        {
+            "name": "bobs-used-bookstore-classic",
+            "status": "SUCCESS",
+            "sourceBranch": "dop323",
+            "transformedProjects": 1,
+            "totalProjects": 1,
+            "transformedLinesOfCode": 109,
+            "totalLinesOfCode": 124,
+            "repositoryLocation": {
+                "id": "aws-samples/bobs-used-bookstore-classic",
+                "type": "GitHub",
+                "url":"https://github.com/aws-samples/bobs-used-bookstore-classic"
+        },
+            "projects": [{
+                "name": "bobs-used-bookstore-classic",
+                "status": "SUCCEEDED",
+                "projectTypes": ["WepApp"],
+                "version": [],
+                "totalLinesOfCode": 109,
+                "transformedLinesOfCode": 109,
+                "filesChange": 1
+            }]
+        }]
+}
