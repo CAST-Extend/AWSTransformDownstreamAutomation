@@ -1,0 +1,82 @@
+{
+   "abstract" : "query, download and build perl modules from CPAN sites",
+   "author" : [
+      "Andreas Koenig <andreas.koenig.gmwojprw@franz.ak.mind.de>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "ExtUtils::MakeMaker version 7.34, CPAN::Meta::Converter version 2.150010",
+   "keywords" : [
+      "CPAN",
+      "module",
+      "module installation"
+   ],
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "CPAN",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Archive::Tar" : "0",
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Requirements" : "2.121",
+            "CPAN::Meta::YAML" : "0",
+            "Compress::Zlib" : "0",
+            "Data::Dumper" : "0",
+            "Digest::MD5" : "0",
+            "Digest::SHA" : "0",
+            "Exporter" : "0",
+            "Exporter::Heavy" : "0",
+            "File::Copy" : "0",
+            "File::Spec" : "0",
+            "File::Temp" : "0",
+            "HTTP::Tiny" : "0.005",
+            "IO::Compress::Base" : "0",
+            "IO::Zlib" : "0",
+            "JSON::PP" : "0",
+            "MIME::Base64" : "0",
+            "Net::FTP" : "0",
+            "Net::Ping" : "0",
+            "Parse::CPAN::Meta" : "0",
+            "Pod::Perldoc" : "0",
+            "Pod::Perldoc::ToMan" : "0",
+            "Scalar::Util" : "0",
+            "Socket" : "2.018",
+            "Test::Harness" : "2.62",
+            "Test::More" : "0",
+            "Text::ParseWords" : "0",
+            "Text::Wrap" : "0",
+            "perl" : "5.006002"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/andk/cpanpm"
+      }
+   },
+   "version" : "2.38",
+   "x_serialization_backend" : "JSON::PP version 2.27105"
+}
