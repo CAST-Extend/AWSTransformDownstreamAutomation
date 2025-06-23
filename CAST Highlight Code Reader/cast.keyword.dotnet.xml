@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserScan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="KeywordModel.xsd">
+	<keywordScan name=".Net Version Checks" version="1.0">
+		<patternGroup name=".Net Framework v1.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject10Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v1\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject10">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net10[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject10Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v1\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject10">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net10[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject10Legacy or CSharpProject10 or VBProject10Legacy or VBProject10)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v1.1" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject11Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v1\.1[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject11">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net11[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject11Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v1\.1[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject11">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net11[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject11Legacy or CSharpProject11 or VBProject11Legacy or VBProject11)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v2.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject20Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v2\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject20">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net20[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject20Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v2\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject20">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net20[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject20Legacy or CSharpProject20 or VBProject20Legacy or VBProject20)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v3.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject30Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v3\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject30">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net30[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject30Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v3\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject30">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net30[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject30Legacy or CSharpProject30 or VBProject30Legacy or VBProject30)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v3.5" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject35Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v3\.5[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject35">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net35[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject35Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v3\.5[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject35">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net35[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject35Legacy or CSharpProject35 or VBProject35Legacy or VBProject35)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v4.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject40Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject40">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net40[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject40Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.0[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject40">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net40[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject40Legacy or CSharpProject40 or VBProject40Legacy or VBProject40)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v4.5" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject45Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.5[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject45">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net45[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject45Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.5[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject45">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net45[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject45Legacy or CSharpProject45 or VBProject45Legacy or VBProject45)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v4.6" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject46Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.6[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject46">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net46[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject46Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.6[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject46">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net46[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject46Legacy or CSharpProject46 or VBProject46Legacy or VBProject46)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v4.7" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject47Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.7[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject47">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net47[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject47Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.7[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject47">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net47[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject47Legacy or CSharpProject47 or VBProject47Legacy or VBProject47)"/>
+		</patternGroup>
+		<patternGroup name=".Net Framework v4.8" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProject48Legacy">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.8[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="CSharpProject48">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net48[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProject48Legacy">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFrameworkVersion\&gt;v4\.8[\.0-9]*\&lt;/TargetFrameworkVersion\&gt;</regexContent>
+				</search>
+				<search id="VBProject48">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net48[0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProject48Legacy or CSharpProject48 or VBProject48Legacy or VBProject48)"/>
+		</patternGroup>
+		<patternGroup name=".Net Core 1.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectCore10">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp1\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectCore10">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp1\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectCore10 or VBProjectCore10)"/>
+		</patternGroup>
+		<patternGroup name=".Net Core 1.1" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectCore11">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp1\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectCore11">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp1\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectCore11 or VBProjectCore11)"/>
+		</patternGroup>
+		<patternGroup name=".Net Core 2.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectCore20">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp2\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectCore20">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp2\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectCore20 or VBProjectCore20)"/>
+		</patternGroup>
+		<patternGroup name=".Net Core 2.1" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectCore21">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp2\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectCore21">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp2\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectCore21 or VBProjectCore21)"/>
+		</patternGroup>
+		<patternGroup name=".Net Core 2.2" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectCore22">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp2\.2[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectCore22">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp2\.2[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectCore22 or VBProjectCore22)"/>
+		</patternGroup>
+		<patternGroup name=".Net Core 3.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectCore30">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp3\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectCore30">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp3\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectCore30 or VBProjectCore30)"/>
+		</patternGroup>
+		<patternGroup name=".Net Core 3.1" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectCore31">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp3\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectCore31">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netcoreapp3\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectCore31 or VBProjectCore31)"/>
+		</patternGroup>
+		<patternGroup name=".NET 5" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectUnified50">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net5\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectUnified50">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net5\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectUnified50 or VBProjectUnified50)"/>
+		</patternGroup>
+		<patternGroup name=".NET 6" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectUnified60">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net6\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectUnified60">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net6\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectUnified60 or VBProjectUnified60)"/>
+		</patternGroup>
+		<patternGroup name=".NET 7" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectUnified70">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net7\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectUnified70">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net7\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectUnified70 or VBProjectUnified70)"/>
+		</patternGroup>
+		<patternGroup name=".NET 8" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectUnified80">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net8\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectUnified80">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net8\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectUnified80 or VBProjectUnified80)"/>
+		</patternGroup>
+		<patternGroup name=".NET 9" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectUnified90">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net8\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectUnified90">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;net9\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectUnified90 or VBProjectUnified90)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 1.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard10">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard10">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard10 or VBProjectStandard10)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 1.1" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard11">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard11">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard11 or VBProjectStandard11)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 1.2" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard12">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.2[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard12">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.2[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard12 or VBProjectStandard12)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 1.3" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard13">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.3[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard13">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.3[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard13 or VBProjectStandard13)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 1.4" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard14">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.4[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard14">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.4[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard14 or VBProjectStandard14)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 1.5" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard15">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.5[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard15">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.5[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard15 or VBProjectStandard15)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 1.6" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard16">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.6[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard16">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard1\.6[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard16 or VBProjectStandard16)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 2.0" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard20">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard2\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard20">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard2\.0[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard20 or VBProjectStandard20)"/>
+		</patternGroup>
+		<patternGroup name=".Net Standard 2.1" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="CSharpProjectStandard21">
+					<filename>*.csproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard2\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+				<search id="VBProjectStandard21">
+					<filename>*.vbproj</filename>
+					<regexContent>\&lt;TargetFramework\&gt;netstandard2\.1[\.0-9]*\&lt;/TargetFramework\&gt;</regexContent>
+				</search>
+			</patterns>
+			<formula value="(CSharpProjectStandard21 or VBProjectStandard21)"/>
+		</patternGroup>
+	</keywordScan>
+	<keywordScan name="ASP.Net Project Type" version="1.0">
+		<patternGroup name="Web Forms\User Controls - ASP.Net 1.0 to ASP.Net 4.x" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="WebForms">
+					<filename>*.aspx</filename>
+				</search>
+				<search id="UserControls">
+					<filename>*.ascx</filename>
+				</search>
+			</patterns>
+			<formula value="(WebForms or UserControls)"/>
+		</patternGroup>
+		<patternGroup name="Web Services - ASP.Net 1.0 to ASP.Net 4.x" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="WebServices">
+					<filename>*.asmx</filename>
+				</search>
+			</patterns>
+			<formula value="(WebServices)"/>
+		</patternGroup>
+		<patternGroup name="HTTP Handlers - ASP.Net 1.0 to ASP.Net 4.x" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="HTTPHandlers">
+					<filename>*.ashx</filename>
+				</search>
+			</patterns>
+			<formula value="(HTTPHandlers)"/>
+		</patternGroup>
+		<patternGroup name="Razor - ASP.Net MVC 3" weight="1" sensitive="0" full_word="0">
+			<patterns>
+<!-- 				<search id="CSHTMLMVC3">
+					<filename>*.cshtml</filename>
+				</search>
+				<search id="VBHTMLMVC3">
+					<filename>*.vbhtml</filename>
+				</search>
+ -->				<search id="CS_MVC3">
+					<filename>*.cs</filename>
+					<content>using System.Web.Mvc</content>
+				</search>
+				<search id="VB_MVC3">
+					<filename>*.vb</filename>
+					<content>using System.Web.Mvc</content>
+				</search>
+			</patterns>
+			<formula value="CS_MVC3 or VB_MVC3"/>
+		</patternGroup>
+		<patternGroup name="Razor - ASP.Net Core MVC" weight="1" sensitive="0" full_word="0">
+			<patterns>
+<!-- 			<search id="CSHTML_CoreMVC">
+					<filename>*.cshtml</filename>
+				</search>
+				<search id="VBHTML_CoreMVC">
+					<filename>*.vbhtml</filename>
+				</search>
+ -->			<search id="CS_CoreMVC">
+					<filename>*.cs</filename>
+					<content>using Microsoft.AspNetCore.Mvc</content>
+				</search>
+				<search id="VB_CoreMVC">
+					<filename>*.vb</filename>
+					<content>using Microsoft.AspNetCore.Mvc</content>
+				</search>
+			</patterns>
+			<formula value="CS_CoreMVC or VB_CoreMVC"/>
+		</patternGroup>
+		<patternGroup name="WPF, Silverlight, WF, WinUI... - Not linked to ASP.Net" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="XAML">
+					<filename>*.xaml</filename>
+				</search>
+			</patterns>
+			<formula value="(XAML)"/>
+		</patternGroup>
+		<patternGroup name="Blazor - ASP.Net Core 3.0 and Above" weight="1" sensitive="0" full_word="0">
+			<patterns>
+				<search id="RAZOR">
+					<filename>*.razor</filename>
+				</search>
+			</patterns>
+			<formula value="(RAZOR)"/>
+		</patternGroup>
+	</keywordScan>
+</UserScan>
