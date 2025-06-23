@@ -48,7 +48,7 @@ and the following files under the _Highlight-Automation-Command_ folder
 ```bash
 python -m venv venv
 ```
-```
+```bash
 source venv/bin/activate      # macOS / Linux
 venv\Scripts\activate         # Windows
 ```
